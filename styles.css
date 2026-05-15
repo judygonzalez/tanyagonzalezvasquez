@@ -1,0 +1,154 @@
+body {
+    font-family: sans-serif;
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: transform 0.3s ease-in;
+}
+
+ul li a:hover {
+    transform: scale(1.05);
+}
+
+ul li a.active {
+    /*border: 2px solid black;*/
+    font-weight: bold;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.navbar,
+.gallery-container,
+.about-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar,
+.gallery-container {
+    max-width: 900px;
+}
+
+.gallery-container,
+.about-container,
+.form-container,
+.iframe-form-container {
+    padding: 1.5rem 0;
+}
+
+.gallery-grid,
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-grid {
+    gap: .5rem;
+}
+
+.about-grid {
+    gap: 5rem;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.photo-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-container {
+    max-width: 800px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 8px 10px;
+  background: gray;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/*styling for google form ↓ ↓ */
+.iframe-form-container iframe {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+textarea {
+    height: 200px;
+}
+
+.submit-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    background-color: pink;
+
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    text-align: center;
+}
