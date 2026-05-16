@@ -1,11 +1,20 @@
 body {
     font-family: sans-serif;
-    margin: 50px;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 h1 {
     text-align: center;
     font-weight: 300;
+    margin-top: 0;
 }
 
 h1 a {
@@ -15,11 +24,11 @@ h1 a {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 10rem;
+    justify-content: space-between;
+    max-width: 550px;
 }
 
 ul li a {
@@ -34,8 +43,12 @@ ul li a:hover {
     transform: scale(1.05);
 }
 
+h1 a:focus,
+ul li a:focus {
+    outline-color: pink;
+}
+
 ul li a.active {
-    /*border: 2px solid black;*/
     font-weight: bold;
 }
 
@@ -43,6 +56,7 @@ ul li a.active {
     position: sticky;
     top: 0;
     background-color: white;
+    overflow: hidden;
 }
 
 .navbar,
@@ -59,23 +73,31 @@ ul li a.active {
 
 .gallery-container,
 .about-container,
-.form-container,
-.iframe-form-container {
+.form-container {
     padding: 1.5rem 0;
 }
 
 .gallery-grid,
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 .gallery-grid {
     gap: .5rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .about-grid {
-    gap: 5rem;
+    gap: 2rem;
+    grid-template-columns: 1.35fr 1fr 1fr;
+}
+
+.about-container {
+    max-width: 775px;
+}
+
+.description-container p:first-child{
+    margin-top: 0;
 }
 
 .grid-col-span-2 {
@@ -94,23 +116,37 @@ img {
     display: block;
 }
 
-.about-container {
-    max-width: 800px;
+.photo-card-headshot img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .download-btn {
   display: inline-block;
   padding: 8px 10px;
-  background: gray;
+  margin-top: 7px;
+  background: #595959;
   color: white;
   text-decoration: none;
   border-radius: 3px;
 }
 
-.form-container {
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
+.download-btn:hover {
+    color: pink;
+}
+
+.download-btn:active {
+    background-color: pink;
+    color: #3D3D3D;
+}
+
+.download-btn:focus {
+    outline-color: hotpink;
+}
+
+.iframe-form-container {
+    padding: .81rem 0 1.5rem;
 }
 
 /*styling for google form ↓ ↓ */
@@ -121,8 +157,10 @@ img {
     max-width: 640px;
 }
 
-h2 {
-    text-align: center;
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 input,
@@ -149,6 +187,8 @@ textarea {
     margin: 10px auto;
 }
 
-footer {
+footer p{
     text-align: center;
+    padding: 8px;
+    margin: 0;
 }
